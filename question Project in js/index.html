@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini project</title>
+</head>
+<body>
+    
+    <select name="role" id="role">
+        <option value="admin">Admin</option>
+        <option value="Guest">Guest</option>
+    </select>
+    <button id="submit">Click here</button>
+    
+    <script>
+        
+       
+        var button=document.getElementById("submit");
+        button.addEventListener("click",function(){
+            
+            var e=document.getElementById("role");
+         var choice= e.options[e.selectedIndex].value;
+            
+        if(choice=="admin")
+            {
+                location.href="admin.html";
+            }
+        
+            else{
+                location.href="guest.html";
+                
+            }
+        
+        });
+       
+    </script>
+    
+</body>
+</html>
